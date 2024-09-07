@@ -115,7 +115,7 @@ body {
 
 
 .flag {
-  width: 128px; /* Ajusta el tamaño según sea necesario */
+  width: 64px; /* Ajusta el tamaño según sea necesario */
   height: auto; /* Mantiene la proporción de la imagen */
   margin-right: 10px; /* Espacio entre la bandera y el texto */
 }
