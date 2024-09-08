@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
-
+/* Estilo general */
 body {
   margin: 0;
   padding: 0;
@@ -14,13 +13,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Cambiado a min-height para permitir más contenido */
+  min-height: 100vh;
   position: relative;
-  padding: 0 1rem; /* Añadir un poco de padding */
+  padding: 0 1rem;
 }
 
 .back-button {
   display: inline-block;
+  font-weight: bold; /* Para hacer el texto en negrita */
   margin-top: 2rem;
   padding: 0.5rem 1rem;
   background-color: rgba(255, 255, 255, 0.1);
@@ -56,6 +56,44 @@ span {
   50% { border-color: transparent; }
 }
 
+
+/*span de acerca de nosotros*/
+.animated-title {
+  display: block;
+  font-size: 5rem; /* Ajusta el tamaño según sea necesario */
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 9ch; /* Ajusta el ancho según el texto */
+  animation: typing 8s steps(10) infinite alternate, blink .5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  50% { width: 10ch; }
+  100% { width: 0; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* separacion h3 en blanco y parrafos para nosotros */
+h3 {
+  color: #ffffff; /* Color blanco para los encabezados h3 */
+}
+
+p {
+  color: #ffffff; /* Color blanco para los párrafos */
+}
+
+ul li {
+  color: #ffffff; /* Color blanco para los elementos de la lista */
+}
+
+
 .subtitle {
   text-align: center;
   font-size: 2.5rem;
@@ -65,36 +103,129 @@ span {
   margin: 1rem 0;
 }
 
-.time {
-  font-size: 1.5rem;
+.description {
+  font-size: 1.2rem;
   color: #ffffff;
   text-align: center;
   margin-top: 0.5rem;
 }
 
+/* Estilo de las categorías (expandibles) */
+.category-container {
+  display: flex; /* Cambia a flexbox */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan si no hay suficiente espacio */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  margin: 1rem 0; /* Espacio alrededor de la categoría */
+}
+
+details {
+  flex: 1 1 300px; /* Permite que los detalles crezcan y se reduzcan, con un ancho base de 300px */
+  margin: 1rem; /* Espacio entre las categorías */
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  overflow: hidden; /* Evita que el contenido afecte el tamaño */
+  max-height: 400px; /* Establece una altura máxima */
+}
+
+details[open] {
+  overflow-y: auto; /* Permite el desplazamiento vertical cuando está abierto */
+  max-height: 400px; /* Mantiene la altura máxima */
+}
+
+summary {
+  list-style: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffffff;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+summary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+details[open] summary {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+details[open] {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo de las tablas dentro de las categorías */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 1rem;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo ligeramente transparente */
+  border-radius: 12px;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Borde transparente */
+}
+
+th {
+  background-color: rgba(255, 255, 255, 0.15);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+td {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* ACA COMIENZA CSS PARA IMAGENES DE TABLAS */
+.image-container {
+  text-align: center; /* Centra la imagen */
+  margin: 1rem 0; /* Espacio arriba y abajo de la imagen */
+}
+
+.excel-table-image {
+  max-width: 100%; /* Asegura que la imagen no se desborde */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 12px; /* Bordes redondeados */
+}
+/*ACA TERMINA CSS DE TABLAS */
 
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
   span {
-    font-size: 3rem; /* Reducir el tamaño de la fuente en pantallas más pequeñas */
+    font-size: 3rem;
   }
 
   .subtitle {
-    font-size: 2rem; /* Ajustar el tamaño de la subtítulo */
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
   span {
-    font-size: 2.5rem; /* Reducir aún más el tamaño de la fuente */
+    font-size: 2.5rem;
   }
-
 
   .subtitle {
-    font-size: 1.5rem; /* Ajustar el tamaño de la subtítulo */
+    font-size: 1.5rem;
   }
 
- 
+  details {
+    width: 90%;
+  }
 }
 
 .footer {
