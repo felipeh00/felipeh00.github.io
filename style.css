@@ -9,6 +9,16 @@ body {
   overflow-x: hidden;
 }
 
+
+    /* Estilos para la imagen en la esquina superior izquierda */
+    .logomain {
+      position: center;
+      top: 60px; /* Ajusta la posición vertical */
+      left: 130px; /* Ajusta la posición horizontal (aumentado de 10px a 20px) */
+ 
+      height: auto; /* Mantiene la proporción de la imagen */
+    }
+
 .container {
   display: flex;
   flex-direction: column;
