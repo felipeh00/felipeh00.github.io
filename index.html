@@ -8,10 +8,65 @@
   <link rel="icon" href="./icoweb.ico" type="image/x-icon">
 </head>
 <body>
-  <div class="radio-container">
-    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-<div class="elfsight-app-ca96e215-c001-4ca9-94de-3fa41ca664c8" data-elfsight-app-lazy></div>
+<!-- aca empieza el reproductor -->
+<style type="text/css"> 
+  .cuadroBordeado {
+      position: fixed; /* Fija el reproductor en la esquina */
+      top: 20px; /* Espacio desde la parte superior */
+      right: 20px; /* Espacio desde la derecha */
+      width: 25%; /* Ancho del reproductor en porcentaje */
+      max-width: 250px; /* Ancho máximo del reproductor */
+      height: 40px; /* Altura del reproductor */
+      z-index: 1000; /* Asegura que esté por encima de otros elementos */
+      border: 2px solid #006773; /* Borde del reproductor */
+      border-radius: 7px; /* Bordes redondeados */
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Sombra */
+      display: flex; /* Usar flexbox para alinear el contenido */
+      align-items: center; /* Centrar verticalmente */
+      justify-content: space-between; /* Espacio entre el iframe y el botón */
+      background-color: #006773; /* Color de fondo del reproductor */
+  }
+
+  iframe {
+      width: 100%; /* El iframe ocupa el 100% del contenedor */
+      height: 100%; /* El iframe ocupa el 100% de la altura del contenedor */
+      border: none; /* Sin borde adicional en el iframe */
+  }
+
+  .close-button {
+      background-color: #006773; /* Color de fondo del botón igual al del reproductor */
+      color: white; /* Color del texto del botón */
+      border: none; /* Sin borde */
+      border-radius: 15px; /* Bordes redondeados estilo iPhone */
+      padding: 5px 8px; /* Espaciado interno más pequeño */
+      cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+      margin-left: 5px; /* Espacio a la izquierda del botón */
+      font-size: 12px; /* Tamaño de fuente más pequeño */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+      transition: background-color 0.3s; /* Transición suave para el color de fondo */
+  }
+
+  .close-button:hover {
+      background-color: #004d4d; /* Color de fondo al pasar el mouse */
+  }
+</style>
+
+<div class="cuadroBordeado" id="audioPlayer">
+    <iframe name="contenedorPlayer" allow="autoplay" 
+        marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" 
+        scrolling="no" 
+        src="http://cp.usastreams.com/pr2g/APPlayerRadioHTML5.aspx?stream=https://stream-175.zeno.fm/ttdooqwykr8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ0dGRvb3F3eWtyOHV2IiwiaG9zdCI6InN0cmVhbS0xNzUuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6ImNRYUZlSDRRUnFHYnJWSTZ0amFBYkEiLCJpYXQiOjE3MjU2Njk2NTUsImV4cCI6MTcyNTY2OTcxNX0.rYggyBAhZAh_knf9fq6Ux_yKOU2OMYVPc72kc0cH73I&fondo=07&formato=mpeg&color=4&titulo=2&autoStart=1&vol=4&tipo=1&nombre=Radio+Ori%c3%b3n&botonPlay=1">
+    </iframe>
+    <button class="close-button" onclick="closePlayer()">X</button> <!-- Botón de cierre -->
+</div>
+
+<script>
+  function closePlayer() {
+      document.getElementById('audioPlayer').style.display = 'none'; // Oculta el reproductor
+  }
+</script>
 </div>  
+<!--Aca finaliza -->
 <div class="container">
     <span>IMPERIO ORIÓN</span>
     <div class="menu-bar">
