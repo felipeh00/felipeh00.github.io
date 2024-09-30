@@ -114,7 +114,7 @@ span {
   margin-top: 2rem;
   z-index: 1;
   flex-wrap: wrap;
-  opacity: 0.8; /* Ajustar la opacidad de las banderas (0.0 a 1.0) */
+  opacity: 0.85; /* Ajustar la opacidad de las banderas (0.0 a 1.0) */
 }
 
 .flag {
