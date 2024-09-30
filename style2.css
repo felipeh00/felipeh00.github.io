@@ -304,7 +304,7 @@ tr:last-child td {
   background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
   color: #B8B8B8; /* Color del texto */
   text-align: center; /* Centrar el texto */
-  padding: 1rem; /* Espaciado interno */
+  padding: 0.2rem; /* Espaciado interno */
   position: relative; /* Posición relativa para el footer */
   bottom: 0; /* Asegura que esté al fondo */
   width: 100%; /* Ancho completo */
@@ -319,5 +319,16 @@ tr:last-child td {
 }
 
 .footer a:hover {
+  color: #ffcc00; /* Color del enlace al pasar el ratón */
+}
+
+.social-media a {
+  color: #B8B8B8; /* Color del enlace */
+  text-decoration: none; /* Quitar subrayado */
+  font-size: 1.2rem; /* Tamaño de los iconos */
+  margin: 0 0.5rem; /* Espaciado entre iconos */
+}
+
+.social-media a:hover {
   color: #ffcc00; /* Color del enlace al pasar el ratón */
 }

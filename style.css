@@ -108,19 +108,22 @@ span {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+
+
 .flags {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
   z-index: 1;
   flex-wrap: wrap;
-  opacity: 0.85; /* Ajustar la opacidad de las banderas (0.0 a 1.0) */
+  opacity: 0.8; /* Ajustar la opacidad de las banderas (0.0 a 1.0) */
 }
 
 .flag {
   width: 128px; /* Ajusta el tamaño según sea necesario */
   height: auto; /* Mantiene la proporción de la imagen */
   margin: 0 10px; /* Espacio entre la bandera y el texto */
+
 }
 
 /* Media Queries para Responsividad */
@@ -140,6 +143,7 @@ span {
 
   .flag {
     width: 100px; /* Ajustar el tamaño de las banderas */
+    opacity: 0.8; /* Ajustar la opacidad de las banderas (0.0 a 1.0) */
   }
 }
 
@@ -165,6 +169,7 @@ span {
 
   .flag {
     width: 80px; /* Ajustar el tamaño de las banderas */
+    opacity: 0.8; /* Ajustar la opacidad de las banderas en pantallas pequeñas */
   }
 }
 
@@ -172,7 +177,7 @@ span {
   background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
   color: #B8B8B8; /* Color del texto */
   text-align: center; /* Centrar el texto */
-  padding: 1rem; /* Espaciado interno */
+  padding: 0.2rem; /* Espaciado interno */
   position: relative; /* Posición relativa para el footer */
   bottom: 0; /* Asegura que esté al fondo */
   width: 100%; /* Ancho completo */
@@ -187,5 +192,16 @@ span {
 }
 
 .footer a:hover {
+  color: #ffcc00; /* Color del enlace al pasar el ratón */
+}
+
+.social-media a {
+  color: #B8B8B8; /* Color del enlace */
+  text-decoration: none; /* Quitar subrayado */
+  font-size: 1.2rem; /* Tamaño de los iconos */
+  margin: 0 0.5rem; /* Espaciado entre iconos */
+}
+
+.social-media a:hover {
   color: #ffcc00; /* Color del enlace al pasar el ratón */
 }
